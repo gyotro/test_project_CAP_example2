@@ -2,8 +2,13 @@
 spring:
   config.activate.on-profile: default
   datasource:
-    url: "jdbc:sqlite:file::memory:?cache=shared"
+#    url: "jdbc:sqlite:file::memory:?cache=shared" --> in memory database
+#   va indicato il path a partire dalla home ( in caso di win da dopo C: )
+    url: "jdbc:sqlite:\\Users\\InnovatesApp\\eclipse-workspace_capm\\test_project\\sqliteText.db"
     driver-class-name: org.sqlite.JDBC
     initialization-mode: always
     hikari:
       maximum-pool-size: 1
+
+server:
+  port: 8081
